@@ -1,4 +1,4 @@
-package com.good.solscript.ui
+package com.good.solscript.ui.mySubscript
 
 
 import android.os.Bundle

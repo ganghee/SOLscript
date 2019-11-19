@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import com.good.solscript.R
+import com.good.solscript.ui.mySubscript.MySubscriptFragment
 import kotlinx.android.synthetic.main.activity_main.*
 
 
@@ -12,7 +13,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var nowFrag: Fragment
 
     var homeFragment = HomeFragment()
-    var mySubscriptFragment = MySubscribeFragment()
+    var mySubscriptFragment = MySubscriptFragment()
     var categoryFragment = CategoryFragment()
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,16 +22,20 @@ class MainActivity : AppCompatActivity() {
 
         callFragment(1)
 
+        setClickListener()
 
-        rl_main_act_tab_btn_home.setOnClickListener {
+    }
+
+    fun setClickListener(){
+        rl_mainAct_homeBtn.setOnClickListener {
             callFragment(1)
         }
 
-        rl_main_act_tab_btn_subscribe.setOnClickListener {
+        rl_mainAct_subscribeBtn.setOnClickListener {
             callFragment(2)
         }
-        
-        rl_main_act_tab_btn_category.setOnClickListener {
+
+        rl_main_act_categoryBtn.setOnClickListener {
             callFragment(3)
         }
 
@@ -53,7 +58,7 @@ class MainActivity : AppCompatActivity() {
         }
         val fm = supportFragmentManager
         val transaction = fm.beginTransaction()
-        transaction.replace(R.id.fl_main_act_frag_container, nowFrag)
+        transaction.replace(R.id.fl_mainAct_fragContainer, nowFrag)
         transaction.commit()
     }
 }

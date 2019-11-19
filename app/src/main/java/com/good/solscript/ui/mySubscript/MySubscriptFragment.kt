@@ -1,8 +1,6 @@
-package com.good.solscript.ui
-
+package com.good.solscript.ui.mySubscript
 
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -18,7 +16,7 @@ import kotlinx.android.synthetic.main.fragment_my_subscript.view.*
 /**
  * A simple [Fragment] subclass.
  */
-class MySubscribeFragment : Fragment() {
+class MySubscriptFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -27,21 +25,19 @@ class MySubscribeFragment : Fragment() {
         // Inflate the layout for this fragment
         var view =  inflater.inflate(R.layout.fragment_my_subscript, container, false)
 
-        setViewPager(view)
+        configureBottomNavigation(view)
 
         return view
     }
 
-    fun setViewPager(v : View){
+    fun configureBottomNavigation(v : View){
 
-        val tabLayout = v.tl_my_sub_frag_top_btn
+        val tabLayout = v.tl_mysubscriptFrag_top
+        val viewPager: ViewPager = v.vp_mysubscriptFrag_container
 
-        val adapter = MySubscribeViewPagerAdapter(2,activity!!.getSupportFragmentManager())
-        val viewPager: ViewPager = v.vp_my_sub_frag_container
-
-
-        viewPager.offscreenPageLimit = 3
-        viewPager.adapter = adapter
+        viewPager.apply {
+            this.adapter = MySubscribeViewPagerAdapter(childFragmentManager)
+        }
 
         tabLayout.setupWithViewPager(viewPager)
 

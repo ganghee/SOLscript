@@ -2,23 +2,23 @@ package com.good.solscript.adapter
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
-import androidx.fragment.app.FragmentStatePagerAdapter
-import com.good.solscript.ui.CalendarFragment
-import com.good.solscript.ui.ManageFragment
+import androidx.fragment.app.FragmentPagerAdapter
+import com.good.solscript.ui.mySubscript.CalendarFragment
+import com.good.solscript.ui.mySubscript.ManageFragment
 
-class MySubscribeViewPagerAdapter(var fragNum : Int, fm : FragmentManager) : FragmentStatePagerAdapter(fm) {
+class MySubscribeViewPagerAdapter(fm : FragmentManager) : FragmentPagerAdapter(fm, BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT) {
 
-    var calendarFragment = CalendarFragment()
-    var manageFragment = ManageFragment()
+    var fragList = listOf("calendar","manage")
 
     override fun getItem(position: Int): Fragment {
         return when (position) {
-            0 -> calendarFragment
-            1 -> manageFragment
+            0 -> CalendarFragment()
+            1 -> ManageFragment()
             else -> null!!
         }
     }
 
-    // 몇 개의 Fragment인지 결정
-    override fun getCount(): Int = fragNum
+    override fun getCount(): Int = fragList.size
+
+    fun getTitle(position: Int) : String = fragList[position]
 }
