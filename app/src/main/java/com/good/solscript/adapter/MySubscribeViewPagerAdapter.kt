@@ -3,8 +3,8 @@ package com.good.solscript.adapter
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
-import com.good.solscript.ui.mySubscript.CalendarFragment
-import com.good.solscript.ui.mySubscript.ManageFragment
+import com.good.solscript.ui.CalendarFragment
+import com.good.solscript.ui.ManageFragment
 
 class MySubscribeViewPagerAdapter(fm : FragmentManager) : FragmentPagerAdapter(fm, BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT) {
 

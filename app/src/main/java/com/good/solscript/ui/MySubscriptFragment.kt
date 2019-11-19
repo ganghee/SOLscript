@@ -1,4 +1,4 @@
-package com.good.solscript.ui.mySubscript
+package com.good.solscript.ui
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
