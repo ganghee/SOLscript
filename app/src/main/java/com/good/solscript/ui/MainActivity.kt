@@ -1,7 +1,7 @@
 package com.good.solscript.ui
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.good.solscript.R
 import kotlinx.android.synthetic.main.activity_main.*
@@ -11,9 +11,9 @@ class MainActivity : AppCompatActivity() {
 
     lateinit var nowFrag: Fragment
 
-    var homeFragment = HomeFragment()
-    var mySubscriptFragment = MySubscribeFragment()
-    var categoryFragment = CategoryFragment()
+    private val homeFragment = HomeFragment()
+    private val mySubscriptFragment = MySubscriptFragment()
+    private val categoryFragment = CategoryFragment()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() {
         rl_main_act_tab_btn_subscribe.setOnClickListener {
             callFragment(2)
         }
-        
+
         rl_main_act_tab_btn_category.setOnClickListener {
             callFragment(3)
         }

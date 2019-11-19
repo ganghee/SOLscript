@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.MySubscribeFragment">
+    tools:context=".ui.MySubscriptFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -13,7 +13,7 @@
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tl_my_sub_frag_top_btn"
             android:layout_width="match_parent"
-            android:layout_height="80dp"/>
+            android:layout_height="80dp" />
 
         <androidx.viewpager.widget.ViewPager
             android:id="@+id/vp_my_sub_frag_container"
