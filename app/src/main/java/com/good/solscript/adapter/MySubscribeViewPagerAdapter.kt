@@ -6,9 +6,10 @@ import androidx.fragment.app.FragmentPagerAdapter
 import com.good.solscript.ui.CalendarFragment
 import com.good.solscript.ui.ManageFragment
 
-class MySubscribeViewPagerAdapter(fm : FragmentManager) : FragmentPagerAdapter(fm, BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT) {
+class MySubscribeViewPagerAdapter(fm: FragmentManager) :
+    FragmentPagerAdapter(fm, BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT) {
 
-    var fragList = listOf("calendar","manage")
+    var fragList = listOf("calendar", "manage")
 
     override fun getItem(position: Int): Fragment {
         return when (position) {
@@ -19,6 +20,5 @@ class MySubscribeViewPagerAdapter(fm : FragmentManager) : FragmentPagerAdapter(f
     }
 
     override fun getCount(): Int = fragList.size
-
-    fun getTitle(position: Int) : String = fragList[position]
+    override fun getPageTitle(position: Int): CharSequence? = fragList[position]
 }
