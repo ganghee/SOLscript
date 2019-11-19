@@ -11,9 +11,9 @@ class MainActivity : AppCompatActivity() {
 
     lateinit var nowFrag: Fragment
 
-    private val homeFragment = HomeFragment()
-    private val mySubscriptFragment = MySubscriptFragment()
-    private val categoryFragment = CategoryFragment()
+    var homeFragment = HomeFragment()
+    var mySubscriptFragment = MySubscriptFragment()
+    var categoryFragment = CategoryFragment()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,16 +21,20 @@ class MainActivity : AppCompatActivity() {
 
         callFragment(1)
 
+        setClickListener()
 
-        rl_main_act_tab_btn_home.setOnClickListener {
+    }
+
+    fun setClickListener(){
+        rl_mainAct_homeBtn.setOnClickListener {
             callFragment(1)
         }
 
-        rl_main_act_tab_btn_subscribe.setOnClickListener {
+        rl_mainAct_subscribeBtn.setOnClickListener {
             callFragment(2)
         }
 
-        rl_main_act_tab_btn_category.setOnClickListener {
+        rl_main_act_categoryBtn.setOnClickListener {
             callFragment(3)
         }
 
@@ -53,7 +57,7 @@ class MainActivity : AppCompatActivity() {
         }
         val fm = supportFragmentManager
         val transaction = fm.beginTransaction()
-        transaction.replace(R.id.fl_main_act_frag_container, nowFrag)
+        transaction.replace(R.id.fl_mainAct_fragContainer, nowFrag)
         transaction.commit()
     }
 }

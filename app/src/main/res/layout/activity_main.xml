@@ -8,7 +8,7 @@
     tools:context=".ui.MainActivity">
 
     <FrameLayout
-        android:id="@+id/fl_main_act_frag_container"
+        android:id="@+id/fl_mainAct_fragContainer"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
@@ -19,7 +19,7 @@
         app:layout_constraintBottom_toBottomOf="parent">
 
         <RelativeLayout
-            android:id="@+id/rl_main_act_tab_btn_home"
+            android:id="@+id/rl_mainAct_homeBtn"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -31,7 +31,7 @@
         </RelativeLayout>
 
         <RelativeLayout
-            android:id="@+id/rl_main_act_tab_btn_subscribe"
+            android:id="@+id/rl_mainAct_subscribeBtn"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -43,7 +43,7 @@
         </RelativeLayout>
 
         <RelativeLayout
-            android:id="@+id/rl_main_act_tab_btn_category"
+            android:id="@+id/rl_main_act_categoryBtn"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
