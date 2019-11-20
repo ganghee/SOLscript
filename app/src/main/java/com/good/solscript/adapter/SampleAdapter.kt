@@ -7,7 +7,9 @@ import com.good.solscript.R
 import com.good.solscript.data.SampleData
 import com.good.solscript.databinding.RecyclerItemBinding
 
-class SampleAdapter : RecyclerView.Adapter<SampleViewHolder>() {
+class SampleAdapter : RecyclerView.Adapter<SampleAdapter.SampleViewHolder>() {
+
+    class SampleViewHolder(val binding : RecyclerItemBinding) : RecyclerView.ViewHolder(binding.root)
 
     var data = listOf<SampleData>()
 
