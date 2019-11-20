@@ -3,11 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.good.solscript">
 
-<<<<<<< HEAD
     <uses-permission android:name="android.permission.INTERNET"/>
-=======
-    <uses-permission android:name="android.permission.INTERNET" />
->>>>>>> eb8c9932daa90427a2b8d4273829a25f26247277
 
     <application
         android:allowBackup="true"
