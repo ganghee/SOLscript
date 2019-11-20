@@ -55,7 +55,6 @@ class CalendarFragment : Fragment() {
                         val data = response.body()
                         data?.let { setRecyclerView(it) }
                     }
-
                 }
             }
         )
