@@ -26,15 +26,15 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun setClickListener(){
-        rl_mainAct_homeBtn.setOnClickListener {
+        rl_mainact_homebtn.setOnClickListener {
             callFragment(1)
         }
 
-        rl_mainAct_subscribeBtn.setOnClickListener {
+        rl_mainact_subscribebtn.setOnClickListener {
             callFragment(2)
         }
 
-        rl_main_act_categoryBtn.setOnClickListener {
+        rl_mainact_categorybtn.setOnClickListener {
             callFragment(3)
         }
 
@@ -57,7 +57,7 @@ class MainActivity : AppCompatActivity() {
         }
         val fm = supportFragmentManager
         val transaction = fm.beginTransaction()
-        transaction.replace(R.id.fl_mainAct_fragContainer, nowFrag)
+        transaction.replace(R.id.fl_mainact_container, nowFrag)
         transaction.commit()
     }
 }

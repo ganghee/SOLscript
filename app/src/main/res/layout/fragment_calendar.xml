@@ -7,7 +7,7 @@
     tools:context=".ui.CalendarFragment">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_calendarFrag_sampleList"
+        android:id="@+id/rv_calendarfrag_samplelist"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 </FrameLayout>

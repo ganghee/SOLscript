@@ -66,9 +66,9 @@ class CalendarFragment : Fragment() {
         sampleAdapter.data = data!!
         sampleAdapter.notifyDataSetChanged()
 
-        rv_calendarFrag_sampleList.apply {
-            adapter = sampleAdapter
+        rv_calendarfrag_samplelist.apply {
             layoutManager = LinearLayoutManager(activity?.applicationContext)
+            adapter = sampleAdapter
         }
     }
 }

@@ -11,12 +11,12 @@
         android:orientation="vertical">
 
         <com.google.android.material.tabs.TabLayout
-            android:id="@+id/tl_mysubscriptFrag_top"
+            android:id="@+id/tl_mysubscriptfrag_top"
             android:layout_width="match_parent"
             android:layout_height="80dp" />
 
         <androidx.viewpager.widget.ViewPager
-            android:id="@+id/vp_mysubscriptFrag_container"
+            android:id="@+id/vp_mysubscriptfrag_container"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
     </LinearLayout>
