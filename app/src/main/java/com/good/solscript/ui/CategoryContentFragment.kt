@@ -12,8 +12,13 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.good.solscript.R
 import com.good.solscript.adapter.FakeRecyclerViewAdapter
+<<<<<<< HEAD
 import com.good.solscript.data.FakeRepository
 import com.good.solscript.data.FakeResponse
+=======
+import com.good.solscript.data.SampleRepository
+import com.good.solscript.data.SampleData
+>>>>>>> eb8c9932daa90427a2b8d4273829a25f26247277
 import io.reactivex.android.schedulers.AndroidSchedulers
 import kotlinx.android.synthetic.main.fragment_category_content.*
 
@@ -22,8 +27,13 @@ import kotlinx.android.synthetic.main.fragment_category_content.*
  */
 class CategoryContentFragment : Fragment() {
 
+<<<<<<< HEAD
     private val repository by lazy { FakeRepository() }
     private val fakeList by lazy { mutableListOf<FakeResponse>() }
+=======
+    private val repository by lazy { SampleRepository() }
+    private val fakeList by lazy { mutableListOf<SampleData>() }
+>>>>>>> eb8c9932daa90427a2b8d4273829a25f26247277
     private val fakeAdapter = FakeRecyclerViewAdapter()
 
     override fun onCreateView(
