@@ -9,7 +9,7 @@ import com.good.solscript.ui.ManageFragment
 class MySubscribeViewPagerAdapter(fm: FragmentManager) :
     FragmentPagerAdapter(fm, BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT) {
 
-    var fragList = listOf("calendar", "manage")
+    private var fragList = listOf("calendar", "manage")
 
     override fun getItem(position: Int): Fragment {
         return when (position) {

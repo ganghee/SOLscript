@@ -1,6 +1,7 @@
 package com.good.solscript.ui
 
 import android.os.Bundle
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.good.solscript.R
@@ -9,11 +10,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
-    lateinit var nowFrag: Fragment
-
-    var homeFragment = HomeFragment()
-    var mySubscriptFragment = MySubscriptFragment()
-    var categoryFragment = CategoryFragment()
+    private lateinit var nowFrag: Fragment
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,11 +18,6 @@ class MainActivity : AppCompatActivity() {
 
         callFragment(1)
 
-        setClickListener()
-
-    }
-
-    fun setClickListener(){
         rl_mainAct_homeBtn.setOnClickListener {
             callFragment(1)
         }
@@ -40,23 +32,25 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    fun callFragment(frag: Int) {
+    private fun callFragment(frag: Int) {
 
         when (frag) {
             1 -> {
-                nowFrag = homeFragment
+                nowFrag = HomeFragment()
             }
 
             2 -> {
-                nowFrag = mySubscriptFragment
+                nowFrag = MySubscriptFragment()
             }
 
             3 -> {
-                nowFrag = categoryFragment
+                nowFrag = CategoryFragment()
             }
         }
-        val fm = supportFragmentManager
-        val transaction = fm.beginTransaction()
+
+        Log.d("callFragment","  " )
+
+        val transaction = supportFragmentManager.beginTransaction()
         transaction.replace(R.id.fl_mainAct_fragContainer, nowFrag)
         transaction.commit()
     }

@@ -1,10 +1,8 @@
 package com.good.solscript.ui
 
 import android.os.Bundle
-<<<<<<< HEAD:app/src/main/java/com/good/solscript/ui/MySubscriptFragment.kt
-=======
+import android.util.Log
 import androidx.fragment.app.Fragment
->>>>>>> 2515aa7375b0277b20f58c423d2102a34ccae1e7:app/src/main/java/com/good/solscript/ui/mySubscript/MySubscriptFragment.kt
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -25,30 +23,21 @@ class MySubscriptFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        var view = inflater.inflate(R.layout.fragment_my_subscript, container, false)
+        val view = inflater.inflate(R.layout.fragment_my_subscript, container, false)
 
         configureBottomNavigation(view)
 
         return view
     }
+    private fun configureBottomNavigation(v : View){
 
-<<<<<<< HEAD:app/src/main/java/com/good/solscript/ui/MySubscriptFragment.kt
-    fun setViewPager(v: View) {
-
-        val tabLayout = v.tl_my_sub_frag_top_btn
-        val viewPager: ViewPager = v.vp_my_sub_frag_container
-
-        viewPager.apply {
-            adapter = MySubscribeViewPagerAdapter(2, childFragmentManager)
-=======
-    fun configureBottomNavigation(v : View){
+        Log.d("MySubscriptFragment","")
 
         val tabLayout = v.tl_mysubscriptFrag_top
         val viewPager: ViewPager = v.vp_mysubscriptFrag_container
 
         viewPager.apply {
             this.adapter = MySubscribeViewPagerAdapter(childFragmentManager)
->>>>>>> 2515aa7375b0277b20f58c423d2102a34ccae1e7:app/src/main/java/com/good/solscript/ui/mySubscript/MySubscriptFragment.kt
         }
 
         tabLayout.setupWithViewPager(viewPager)
