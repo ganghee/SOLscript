@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.good.solscript.R
 import com.good.solscript.adapter.SampleAdapter
 import com.good.solscript.data.SampleData
+import com.good.solscript.data.SampleRepository
 import com.good.solscript.data.remote.SampleRemoteDataSource
 import kotlinx.android.synthetic.main.fragment_calendar.*
 import retrofit2.Call
@@ -23,8 +24,7 @@ import retrofit2.Response
 class CalendarFragment : Fragment() {
 
     val CALENDARFRAGMENT = "calendarFragment:"
-
-    private val call: Call<List<SampleData>> = SampleRemoteDataSource.service.getSample()
+    private val repository by lazy { SampleRepository() }
     private val sampleAdapter by lazy { SampleAdapter() }
 
     override fun onCreateView(
@@ -32,6 +32,7 @@ class CalendarFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
+        Log.d("onCreateView","CalendarFragment")
         return inflater.inflate(R.layout.fragment_calendar, container, false)
     }
 
@@ -42,7 +43,7 @@ class CalendarFragment : Fragment() {
     }
 
     private fun getSampleResponse(){
-        call.enqueue(
+        repository.getSampleDates().enqueue(
             object : Callback<List<SampleData>> {
                 override fun onFailure(call: Call<List<SampleData>>, t: Throwable) {
                     Log.e(CALENDARFRAGMENT, t.toString())
