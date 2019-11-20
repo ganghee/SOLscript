@@ -1,8 +1,7 @@
 package com.good.solscript.data
-
 import com.google.gson.annotations.SerializedName
 
-data class FakeResponse(
+data class SampleData(
     @SerializedName("body")
     val body: String,
     @SerializedName("id")

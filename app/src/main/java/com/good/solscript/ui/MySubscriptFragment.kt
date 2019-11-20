@@ -1,12 +1,11 @@
 package com.good.solscript.ui
 
 import android.os.Bundle
-import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.RelativeLayout
+import androidx.fragment.app.Fragment
 import androidx.viewpager.widget.ViewPager
 import com.good.solscript.R
 import com.good.solscript.adapter.MySubscribeViewPagerAdapter
@@ -24,14 +23,12 @@ class MySubscriptFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_my_subscript, container, false)
-
-        configureBottomNavigation(view)
+        configureTopNavigation(view)
 
         return view
     }
-    private fun configureBottomNavigation(v : View){
 
-        Log.d("MySubscriptFragment","")
+    private fun configureTopNavigation(v: View) {
 
         val tabLayout = v.tl_mysubscriptFrag_top
         val viewPager: ViewPager = v.vp_mysubscriptFrag_container

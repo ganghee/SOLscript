@@ -4,11 +4,11 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.good.solscript.R
-import com.good.solscript.data.FakeResponse
+import com.good.solscript.data.SampleData
 
 class FakeRecyclerViewAdapter : RecyclerView.Adapter<FakeViewHolder>() {
 
-    private val fakeList = mutableListOf<FakeResponse>()
+    private val fakeList = mutableListOf<SampleData>()
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FakeViewHolder =
@@ -26,7 +26,7 @@ class FakeRecyclerViewAdapter : RecyclerView.Adapter<FakeViewHolder>() {
     override fun onBindViewHolder(holder: FakeViewHolder, position: Int) =
         holder.bind(fakeList[position])
 
-    fun setData(setDataList: List<FakeResponse>) {
+    fun setData(setDataList: List<SampleData>) {
         this.fakeList.clear()
         this.fakeList.addAll(setDataList)
         notifyDataSetChanged()
