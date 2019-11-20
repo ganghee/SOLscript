@@ -1,11 +1,9 @@
 package com.good.solscript.adapter
 
-import android.view.View
-import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.good.solscript.R
-import com.good.solscript.data.SampleData
+import com.good.solscript.databinding.RecyclerItemBinding
 
+/*
 class SampleViewHolder(view : View) : RecyclerView.ViewHolder(view){
 
     val container : View = view.findViewById(R.id.cl_recyclerItem_container)
@@ -17,4 +15,6 @@ class SampleViewHolder(view : View) : RecyclerView.ViewHolder(view){
         contents.text = data.body
     }
 
-}
+}*/
+
+class SampleViewHolder(val binding : RecyclerItemBinding) : RecyclerView.ViewHolder(binding.root)

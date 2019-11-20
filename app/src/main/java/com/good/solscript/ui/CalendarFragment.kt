@@ -22,9 +22,10 @@ import retrofit2.Response
  */
 class CalendarFragment : Fragment() {
 
-    val call: Call<List<SampleData>> = SampleRemoteDataSourse.service.getSample()
     val CALENDARFRAGMENT = "calendarFragment:"
-    val sampleAdapter by lazy { SampleAdapter() }
+
+    private val call: Call<List<SampleData>> = SampleRemoteDataSourse.service.getSample()
+    private val sampleAdapter by lazy { SampleAdapter() }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -40,7 +41,7 @@ class CalendarFragment : Fragment() {
         getSampleResponse()
     }
 
-    fun getSampleResponse(){
+    private fun getSampleResponse(){
         call.enqueue(
             object : Callback<List<SampleData>> {
                 override fun onFailure(call: Call<List<SampleData>>, t: Throwable) {
