@@ -39,12 +39,12 @@
                     android:id="@+id/cv_calendarfrag_calendar"
                     android:layout_width="match_parent"
                     android:layout_height="360dp"
-                    android:visibility="visible"
                     app:layout_constraintTop_toTopOf="parent"
                     tools:layout_editor_absoluteX="0dp" />
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/rv_calendarfrag_selectedlist"
+                    android:visibility="gone"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     app:layout_constraintTop_toBottomOf="@+id/cv_calendarfrag_calendar"/>
