@@ -17,16 +17,20 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         callFragment(1)
+        setClickListener()
 
-        rl_mainAct_homeBtn.setOnClickListener {
+    }
+
+    fun setClickListener(){
+        rl_mainact_homebtn.setOnClickListener {
             callFragment(1)
         }
 
-        rl_mainAct_subscribeBtn.setOnClickListener {
+        rl_mainact_subscribebtn.setOnClickListener {
             callFragment(2)
         }
 
-        rl_main_act_categoryBtn.setOnClickListener {
+        rl_mainact_categorybtn.setOnClickListener {
             callFragment(3)
         }
 
@@ -51,7 +55,7 @@ class MainActivity : AppCompatActivity() {
         Log.d("callFragment", "  ")
 
         val transaction = supportFragmentManager.beginTransaction()
-        transaction.replace(R.id.fl_mainAct_fragContainer, nowFrag)
+        transaction.replace(R.id.fl_mainact_container, nowFrag)
         transaction.commit()
     }
 }

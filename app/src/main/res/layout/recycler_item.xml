@@ -10,7 +10,7 @@
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/cl_recyclerItem_container"
+        android:id="@+id/cl_recycleritem_container"
         android:layout_width="match_parent"
         android:layout_height="160dp"
         android:layout_margin="4dp"
@@ -18,7 +18,7 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/tv_recyclerItem_title"
+            android:id="@+id/tv_recycleritem_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
@@ -28,14 +28,14 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/tv_recyclerItem_contents"
+            android:id="@+id/tv_recycleritem_contents"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="20dp"
             android:layout_marginTop="24dp"
             android:text="@{sampleData.body}"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_recyclerItem_title" />
+            app:layout_constraintTop_toBottomOf="@+id/tv_recycleritem_title" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

@@ -31,8 +31,8 @@ class SubscriptFragment : Fragment() {
 
     private fun configureBottomNavigation(v: View) {
 
-        val tabLayout = v.tl_mysubscriptFrag_top
-        val viewPager: ViewPager = v.vp_mysubscriptFrag_container
+        val tabLayout = v.tl_mysubscriptfrag_top
+        val viewPager: ViewPager = v.vp_mysubscriptfrag_container
 
         viewPager.apply {
             this.adapter = MySubscribeViewPagerAdapter(childFragmentManager)
@@ -43,10 +43,8 @@ class SubscriptFragment : Fragment() {
         val bottomNaviLayout: View =
             this.layoutInflater.inflate(R.layout.tablayout_mysubscript_top, null, false)
 
-        tabLayout.getTabAt(0)!!.customView =
-            bottomNaviLayout.findViewById(R.id.rl_my_sub_frag_calendar) as RelativeLayout
-        tabLayout.getTabAt(1)!!.customView =
-            bottomNaviLayout.findViewById(R.id.rl_my_sub_frag_manage) as RelativeLayout
+        tabLayout.getTabAt(0)!!.customView = bottomNaviLayout.findViewById(R.id.rl_mysubfrag_calendar) as RelativeLayout
+        tabLayout.getTabAt(1)!!.customView = bottomNaviLayout.findViewById(R.id.rl_mysubfrag_manage) as RelativeLayout
 
     }
 }
