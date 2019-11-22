@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
+
         <variable
             name="sampleData"
             type="com.good.solscript.data.SampleData" />
@@ -12,10 +13,9 @@
         android:id="@+id/cl_recyclerItem_container"
         android:layout_width="match_parent"
         android:layout_height="160dp"
-        android:background="@color/colorPrimary"
-        android:orientation="vertical"
         android:layout_margin="4dp"
-        >
+        android:background="@color/colorPrimary"
+        android:orientation="vertical">
 
         <TextView
             android:id="@+id/tv_recyclerItem_title"
@@ -30,10 +30,10 @@
         <TextView
             android:id="@+id/tv_recyclerItem_contents"
             android:layout_width="match_parent"
-            android:text="@{sampleData.body}"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
             android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="24dp"
+            android:text="@{sampleData.body}"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_recyclerItem_title" />
 

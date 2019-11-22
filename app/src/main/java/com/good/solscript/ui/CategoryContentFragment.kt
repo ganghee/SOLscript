@@ -12,10 +12,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.good.solscript.R
 import com.good.solscript.adapter.FakeRecyclerViewAdapter
-import com.good.solscript.data.FakeRepository
-import com.good.solscript.data.FakeResponse
-import com.good.solscript.data.SampleRepository
 import com.good.solscript.data.SampleData
+import com.good.solscript.data.SampleRepository
 import io.reactivex.android.schedulers.AndroidSchedulers
 import kotlinx.android.synthetic.main.fragment_category_content.*
 
@@ -34,7 +32,7 @@ class CategoryContentFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        Log.d("onCreateView ","CategoryContentFragment")
+        Log.d("onCreateView ", "CategoryContentFragment")
 
         return inflater.inflate(R.layout.fragment_category_content, container, false)
     }
@@ -44,13 +42,13 @@ class CategoryContentFragment : Fragment() {
         super.onActivityCreated(savedInstanceState)
         //val categoryName = arguments?.getString(CATEGORY_NAME)
 
-        Log.d("onActivityCreatedLog","")
+        Log.d("onActivityCreatedLog", "")
         recyclerViewSetup()
 
         repository.getFakeDatas()
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe({
-                Log.d("list","fakeList"+fakeList)
+                Log.d("list", "fakeList" + fakeList)
                 it.map {
                     fakeList.add(it)
                     fakeAdapter.setData(fakeList)
@@ -58,9 +56,10 @@ class CategoryContentFragment : Fragment() {
                 //fakeList.add(it)
 
             }, {
-                Log.d("fakeList_err", "fail"+it.message)
+                Log.d("fakeList_err", "fail" + it.message)
             })
     }
+
     private fun recyclerViewSetup() {
         recyclerview_fakelist?.run {
             adapter = fakeAdapter

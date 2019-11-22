@@ -40,7 +40,7 @@ class MainActivity : AppCompatActivity() {
             }
 
             2 -> {
-                nowFrag = MySubscriptFragment()
+                nowFrag = SubscriptFragment()
             }
 
             3 -> {
@@ -48,7 +48,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        Log.d("callFragment","  " )
+        Log.d("callFragment", "  ")
 
         val transaction = supportFragmentManager.beginTransaction()
         transaction.replace(R.id.fl_mainAct_fragContainer, nowFrag)

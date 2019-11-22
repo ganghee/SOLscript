@@ -21,7 +21,7 @@ class CategoryFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        Log.d("onCreateView","categoryFragment")
+        Log.d("onCreateView", "categoryFragment")
         return inflater.inflate(R.layout.fragment_category, container, false)
 
 
@@ -31,7 +31,7 @@ class CategoryFragment : Fragment() {
         super.onActivityCreated(savedInstanceState)
 
         configureMainTab()
-        Log.d("onActivityCreated","categoryFragment")
+        Log.d("onActivityCreated", "categoryFragment")
 
     }
 

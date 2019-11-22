@@ -3,8 +3,8 @@ package com.good.solscript.adapter
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
-import com.good.solscript.ui.CalendarFragment
-import com.good.solscript.ui.ManageFragment
+import com.good.solscript.ui.SubscriptCalendarFragment
+import com.good.solscript.ui.SubscriptManageFragment
 
 class MySubscribeViewPagerAdapter(fm: FragmentManager) :
     FragmentPagerAdapter(fm, BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT) {
@@ -13,8 +13,8 @@ class MySubscribeViewPagerAdapter(fm: FragmentManager) :
 
     override fun getItem(position: Int): Fragment {
         return when (position) {
-            0 -> CalendarFragment()
-            1 -> ManageFragment()
+            0 -> SubscriptCalendarFragment()
+            1 -> SubscriptManageFragment()
             else -> null!!
         }
     }
