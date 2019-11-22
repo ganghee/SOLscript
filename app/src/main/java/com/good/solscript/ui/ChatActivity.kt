@@ -44,5 +44,7 @@ class ChatActivity : AppCompatActivity() {
         var message = et_chatact_inputtext.text.toString()
         chatAdapter.addItem(ChatData(message,"",me = true))
         et_chatact_inputtext.setText("")
+
+        rv_chatact_chatlist.smoothScrollToPosition(chatAdapter.itemCount)
     }
 }
